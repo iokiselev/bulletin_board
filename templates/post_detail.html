@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ adv.name }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ adv.name }}</h1>
+  <div class="alert alert-info">
+    <p>{{ adv.description }}</p>
+    <p><b>Дата: {{ adv.date.date() }}</b></p>
+        <a href="/posts/{{ adv.id }}/delete" class="btn btn-danger">Удалить объявление</a>
+        <a href="/posts/{{ adv.id }}/update" class="btn btn-primary">Редактировать объявление</a>
+  </div>
+</div>
+{% endblock %}
