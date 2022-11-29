@@ -8,7 +8,6 @@
 <div class="container mt-5">
     <h1>Список объявлений</h1>
 
-  {% if adv|length > 0 %}
     {% for element in adv %}
     <div class="alert alert-info">
       <h2>{{ element.name }}</h2>
@@ -17,8 +16,5 @@
       <a href="/posts/{{ element.id }}" class="btn btn-warning">Детальнее</a>
     </div>
     {% endfor %}
-  {% else %}
-  <p>У вас еще нет объявлений :(</p>
-  {% endif %}
 </div>
 {% endblock %}
